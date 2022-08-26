@@ -16,4 +16,4 @@ Test 2: It should allow the user to input multiple toppings into our userPizza f
 Code: 
   userPizza("small", "ranch", "cheese and pepperoni")
 Expected Return:
-userPizza {size: 'small', sauce: 'ranch', topping: 'cheese and pepperoni'}
+userPizza {size: 'small', sauce: 'marinara', 'ranch' topping = [] to allow to push toppings into array for multiple options?
