@@ -1,6 +1,7 @@
-function userPizza (userSize, userSauce, userDips, userToppings){
-  this.size = userSize
-  this.sauce = userSauce
-  this.dips = userDips
-  this.topping = userToppings
-} 
+function Pizza(size, topping1, topping2, topping3) {
+  this.size = size
+  this.topping1 = topping1
+  this.topping2 = topping2
+  this.topping3 = topping3
+}
+

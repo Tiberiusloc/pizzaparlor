@@ -1,13 +1,8 @@
-"Make a userPizza constructor to gather user inputs and create userPizza object"
+"Make a Pizza constructor to gather user inputs and create Pizza object"
 
-"Create objects for the size, sauce, toppings, dipping sauces, that are included in our have prize and size"
-
-"Connect input values with correct object names so user can make selection and return cost of pizza"
-
-Describe userPizza (userSize, userSauce, userTopping)
+Describe Pizza();
 
 Test 1: It should take the user inputs and create a pizza with the correct inputs"
 Code:
-  userPizza("small", "marinara", "ranch","pepperoni")
+  let pizza = new Pizza("small","cheese","pepperoni","bacon")
 Expected Return:
-userPizza {size: 'small', sauce: 'marinara', dips: 'ranch', topping: 'pepperoni'}
