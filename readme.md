@@ -34,3 +34,11 @@ Code:
   pizza.dippingPrice()
 Expected Return: 12
 
+Describe toppingPrice()
+
+Test: It should return the price of the pizza depending on number of toppings selected"
+Code:
+  let pizza = new Pizza("Small", "Red Sauce", "Ranch")
+  pizza.toppingPrice()
+Expected Return:
+14
