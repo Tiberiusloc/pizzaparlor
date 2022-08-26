@@ -1,17 +1,13 @@
 "Make a Pizza constructor to gather user inputs and create Pizza object"
 
+"Make objects for pizza size, sauce, dips, toppings that have objects inside that decide name and price as keys"
+
+
 Describe Pizza();
 
-Test 1: It should take the user inputs and create a pizza with the correct inputs"
+Test 1: It should take the user inputs and create a pizza and store the information"
 Code:
-  let pizza = new Pizza("small","cheese","pepperoni","bacon")
+  let pizza = new Pizza ("small", "marinara","ranch")
 Expected Return:
-  Pizza {size: 'small', topping1: 'cheese', topping2: 'pepperoni', topping3: 'bacon'}
+Pizza {size: 'small', sauce: 'marinara', dipping: 'ranch', toppings: Array(0)}
 
-Describe totalCost()
-
-Test 1: It should add the cost of different toppings and size and return no cost if no toppings are selected.
-Code: 
-   let pizza = new Pizza("0","0","0","0")
-Expected Return:
-  Total cost = 0;
