@@ -11,3 +11,9 @@ Code:
   userPizza("small", "marinara", "cheese")
 Expected Return:
 userPizza {size: 'small', sauce: 'marinara', topping: 'cheese'}
+ 
+Test 2: It should allow the user to input multiple toppings into our userPizza function
+Code: 
+  userPizza("small", "ranch", "cheese and pepperoni")
+Expected Return:
+userPizza {size: 'small', sauce: 'ranch', topping: 'cheese and pepperoni'}
