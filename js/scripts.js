@@ -42,4 +42,8 @@ Pizza.prototype.dippingPrice = function() {
   return this.price
 }
 
+Pizza.prototype.toppingPrice = function() {
+  return this.price += (this.toppings.length * 2);
+}
+
 
