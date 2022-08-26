@@ -9,9 +9,9 @@ this.price = 0;
 
 Pizza.prototype.sizePrice = function() {
   this.size = this.size;
-  if(this.size === 'Small') {
+  if(this.size.includes("Small")) {
     this.price = 8;
-  } else if (this.size === 'Medium') {
+  } else if (this.size.includes('Medium')) {
     this.price = 10;
   } else {
     this.price = 12
@@ -33,9 +33,9 @@ Pizza.prototype.saucePrice = function() {
 
 Pizza.prototype.dippingPrice = function() {
   this.dipping = this.dipping;
-  if(this.dipping === 'Ranch') {
+  if(this.dipping.includes("Ranch")) {
     this.price += 2;
-  } else if (this.dipping === 'Marinara') {
+  } else if (this.dipping.includes("Marinara")) {
     this.price += 1;
   } else {
     this.price += 0
@@ -57,15 +57,21 @@ function handleFormSubmission(event) {
   let toppingchoices = document.querySelectorAll('input[name="topping"]:checked')
   toppingchoices.forEach((toppingchoices) => {
     toppings.push(toppingchoices.value)
+    console.log(toppings)
+    console.log(sauce)
+    console.log(size)
+    console.log(dip)
+
   });
-  let pizza = new Pizza(size, sauce, dip, toppings)
+  let pizza = new Pizza(size, sauce, dip)
 
   pizza.sizePrice()
+  console.log(pizza.sizePrice())
   pizza.saucePrice()
   pizza.dippingPrice()
   pizza.toppingPrice()
   const totalPrice = pizza.price
-  document.querySelector("span#totalprice").innerHTML = totalPrice.value
+  document.querySelector("span#totalprice").innerText = totalPrice
 }
 
 
