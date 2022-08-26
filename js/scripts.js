@@ -1,3 +1,4 @@
+//Business Logic
 function Pizza (size, sauce, dip) {
 this.size = size
 this.sauce = sauce
@@ -45,5 +46,32 @@ Pizza.prototype.dippingPrice = function() {
 Pizza.prototype.toppingPrice = function() {
   return this.price += (this.toppings.length * 2);
 }
+
+//UI Logic
+function handleFormSubmission(event) {
+  event.preventDefault();
+  let size = document.querySelector("#pizza-size").value;
+  let sauce = document.querySelector("#sauce-option").value;
+  let dip = document.querySelector("#dipping-option").value;
+  let toppings = [];
+  let toppingchoices = document.querySelectorAll('input[name="topping"]:checked')
+  toppingchoices.forEach((toppingchoices) => {
+    toppings.push(toppingchoices.value)
+  });
+  let pizza = new Pizza(size, sauce, dip, toppings)
+
+  pizza.sizePrice()
+  pizza.saucePrice()
+  pizza.dippingPrice()
+  pizza.toppingPrice()
+  const totalPrice = pizza.price
+  document.querySelector("span#totalprice").innerHTML = totalPrice.value
+}
+
+
+
+window.addEventListener("load", function() {
+  document.querySelector("form#pizzaform").addEventListener("submit", handleFormSubmission);
+})
 
 
