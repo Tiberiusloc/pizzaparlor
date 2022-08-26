@@ -1,6 +1,5 @@
-"Make a Pizza constructor to gather user inputs and create Pizza object"
 
-"Make objects for pizza size, sauce, dips, toppings that have objects inside that decide name and price as keys"
+"Make a Pizza constructor to gather user inputs and create Pizza object"
 
 
 Describe Pizza();
@@ -11,3 +10,4 @@ Code:
 Expected Return:
 Pizza {size: 'small', sauce: 'marinara', dipping: 'ranch', toppings: Array(0)}
 
+"Make objects for pizza size, sauce, dips, toppings that have objects inside that decide name and price as keys"
