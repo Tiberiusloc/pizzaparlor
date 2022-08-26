@@ -14,4 +14,4 @@ Test 1: It should add the cost of different toppings and size and return no cost
 Code: 
    let pizza = new Pizza("0","0","0","0")
 Expected Return:
-  Pizza {size: 'small', topping1: 'cheese', topping2: 'pepperoni', topping3: 'bacon'}
+  Total cost = 0;
