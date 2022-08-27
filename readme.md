@@ -1,4 +1,48 @@
 
+# Pizza Parlor Project
+
+
+#### By: _**Tiberius Lockett**_
+
+
+#### This is an application where a user can input items and receive a pizza order.
+
+
+## Technologies Used
+
+
+* *_HTML_*  
+* *_CSS_*  
+* *_JavaScript_*
+* *_Bootstrap_*
+
+
+## Description
+
+
+This site lets the user to choose pizza size, sauce, dips, and toppings to pick out a pizza to order. Using JavaScript to take inputs and return the final cost of a pizza.
+
+
+## Setup/Installation Requirements
+
+* Clone this repository to your desktop by using the URL.
+* Open Git bash
+* Change to directory you'd like to work in
+* Use command Git Clone with URL
+* Press Enter to command cloning
+* Open folder where you cloned repository into
+* Open index.html in your browser default broswer.
+
+
+## Known Bugs
+
+
+* If click button with different inputs will change price
+
+## Tests
+
+<details>
+<summary>Tests</summary>
 "Make a Pizza constructor to gather user inputs and create Pizza object"
 
 
@@ -42,3 +86,10 @@ Code:
   pizza.toppingPrice()
 Expected Return:
 14
+</details>
+
+## License
+[GNU GPL3.0](https://choosealicense.com/licenses/gpl-3.0/)
+
+
+Copyright (c) _08/2022_ _Tiberius Lockett_

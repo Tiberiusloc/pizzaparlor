@@ -1,9 +1,9 @@
 //Business Logic
-function Pizza (size, sauce, dip) {
+function Pizza (size, sauce, dip, toppings) {
 this.size = size
 this.sauce = sauce
 this.dipping = dip
-this.toppings = [];
+this.toppings = toppings
 this.price = 0;
 }
 
@@ -21,9 +21,9 @@ Pizza.prototype.sizePrice = function() {
 
 Pizza.prototype.saucePrice = function() {
   this.sauce = this.sauce;
-  if(this.sauce === 'Red Sauce') {
+  if(this.sauce.includes("Red Sauce")) {
     this.price += 2;
-  } else if (this.size === 'White Sauce') {
+  } else if (this.sauce.includes("White Sauce")) {
     this.price += 3;
   } else {
     this.price += 0
@@ -45,7 +45,8 @@ Pizza.prototype.dippingPrice = function() {
 
 Pizza.prototype.toppingPrice = function() {
   return this.price += (this.toppings.length * 2);
-}
+} 
+
 
 //UI Logic
 function handleFormSubmission(event) {
@@ -58,20 +59,16 @@ function handleFormSubmission(event) {
   toppingchoices.forEach((toppingchoices) => {
     toppings.push(toppingchoices.value)
     console.log(toppings)
-    console.log(sauce)
-    console.log(size)
-    console.log(dip)
-
   });
-  let pizza = new Pizza(size, sauce, dip)
+  let pizza = new Pizza(size, sauce, dip, toppings)
 
   pizza.sizePrice()
-  console.log(pizza.sizePrice())
   pizza.saucePrice()
   pizza.dippingPrice()
   pizza.toppingPrice()
   const totalPrice = pizza.price
   document.querySelector("span#totalprice").innerText = totalPrice
+  document.querySelector("div#pizzacost").removeAttribute("class", "hidden")
 }
 
 
